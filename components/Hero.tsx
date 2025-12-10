@@ -12,7 +12,7 @@ export default function Hero() {
       />
       <div className='absolute inset-0 bg-black/10' />{' '}
       {/* Dark overlay for better text contrast if needed later */}
-      <div className='relative z-10 text-center text-white pr-12'>
+      <div className='relative z-10 text-center text-white px-4 md:pr-12 md:px-0'>
         <h1 className='text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg'>
           공간의 가치를 더하는
           <br />

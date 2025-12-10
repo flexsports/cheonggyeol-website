@@ -31,22 +31,22 @@ export default function PremiumService() {
   ];
 
   return (
-    <section className='py-20 px-4 bg-white mb-20'>
+    <section className='py-12 md:py-20 px-4 bg-white mb-12 md:mb-20'>
       <div className='w-[1375px] max-w-full mx-auto'>
-        <div className='text-center mb-12'>
-          <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
+        <div className='text-center mb-8 md:mb-12'>
+          <h2 className='text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 md:mb-4'>
             청결의 프리미엄 서비스
           </h2>
-          <p className='text-gray-600'>고객 만족을 위한 4가지 핵심 가치</p>
+          <p className='text-gray-600 text-sm md:text-base'>고객 만족을 위한 4가지 핵심 가치</p>
         </div>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6'>
           {premiumItems.map((item, index) => (
             <div
               key={index}
               className='bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300'
             >
-              <div className='relative w-full h-64'>
+              <div className='relative w-full h-48 md:h-64'>
                 <Image
                   src={item.imageSrc}
                   alt={item.title}
@@ -55,8 +55,8 @@ export default function PremiumService() {
                   sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw'
                 />
               </div>
-              <div className='p-6'>
-                <h3 className='text-xl font-bold text-gray-900 mb-3'>{item.title}</h3>
+              <div className='p-4 md:p-6'>
+                <h3 className='text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3'>{item.title}</h3>
                 <p className='text-gray-600 text-sm leading-relaxed'>{item.description}</p>
               </div>
             </div>

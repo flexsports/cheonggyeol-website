@@ -75,35 +75,35 @@ const EmailIcon = () => (
 export default function Footer() {
   return (
     <footer className='bg-gray-100 text-gray-700 py-4 px-4'>
-      <div className='max-w-6xl mx-auto flex flex-col md:flex-row gap-1 items-start'>
-        {/* Logo Section - Left */}
-        <div className='flex'>
-          <div className='relative w-40 h-34 block ml-20'>
+      <div className='max-w-6xl mx-auto flex flex-col md:flex-row gap-4 md:gap-1 items-center md:items-start'>
+        {/* Logo Section - Centered on mobile, left on desktop */}
+        <div className='flex justify-center md:justify-start w-full md:w-auto'>
+          <div className='relative w-40 h-34 block md:ml-20'>
             <Image
               src='/footer_logo2.png'
               alt='Company Logo'
               fill
-              className='object-contain object-left'
+              className='object-contain object-center md:object-left'
             />
           </div>
         </div>
 
-        {/* Contact Information - Right */}
-        <div className='flex-1'>
-          <div className='space-y-1 text-sm mt-5'>
-            <div className='flex items-center gap-2'>
+        {/* Contact Information - Centered on mobile, left-aligned on desktop */}
+        <div className='flex-1 w-full md:w-auto'>
+          <div className='space-y-1 text-sm mt-2 md:mt-5 text-center md:text-left'>
+            <div className='flex items-center justify-center md:justify-start gap-2'>
               <UserIcon />
               <span>대표이사: 김현진</span>
             </div>
-            <div className='flex items-center gap-2'>
+            <div className='flex items-center justify-center md:justify-start gap-2'>
               <LocationIcon />
               <span>경기도 광명시 소하로 190 광명G타워 A동 1005호</span>
             </div>
-            <div className='flex items-center gap-2'>
+            <div className='flex items-center justify-center md:justify-start gap-2'>
               <PhoneIcon />
               <span>TEL: 010-2880-1814, 02-6941-0787</span>
             </div>
-            <div className='flex items-center gap-2'>
+            <div className='flex items-center justify-center md:justify-start gap-2'>
               <EmailIcon />
               <span>Email: cjdruf1814@naver.com</span>
             </div>
