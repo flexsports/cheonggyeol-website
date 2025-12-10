@@ -90,22 +90,30 @@ export default function Footer() {
 
         {/* Contact Information - Centered on mobile, left-aligned on desktop */}
         <div className='flex-1 w-full md:w-auto'>
-          <div className='space-y-1 text-sm mt-2 md:mt-5 text-center md:text-left'>
-            <div className='flex items-center justify-center md:justify-start gap-2'>
-              <UserIcon />
+          <div className='space-y-1 md:text-sm text-xs mt-2 md:mt-5 text-center md:text-left'>
+            <div className='flex items-start justify-cente md:justify-start gap-1'>
+              <div className='pt-0.5 shrink-0'>
+                <UserIcon />
+              </div>
               <span>대표이사: 김현진</span>
             </div>
-            <div className='flex items-center justify-center md:justify-start gap-2'>
-              <LocationIcon />
-              <span>경기도 광명시 소하로 190 광명G타워 A동 1005호</span>
+            <div className='flex items-start  md:justify-start gap-1'>
+              <div className='pt-0.5 shrink-0'>
+                <LocationIcon />
+              </div>
+              <span>경기도 광명시 소하로190 광명G타워 A동 1005호</span>
             </div>
-            <div className='flex items-center justify-center md:justify-start gap-2'>
-              <PhoneIcon />
-              <span>TEL: 010-2880-1814, 02-6941-0787</span>
+            <div className='flex items-start justify-cente md:justify-start gap-1'>
+              <div className='pt-0.5 shrink-0'>
+                <PhoneIcon />
+              </div>
+              <span>010-2880-1814, 02-6941-0787</span>
             </div>
-            <div className='flex items-center justify-center md:justify-start gap-2'>
-              <EmailIcon />
-              <span>Email: cjdruf1814@naver.com</span>
+            <div className='flex items-start justify-cente md:justify-start gap-1'>
+              <div className='pt-0.5 shrink-0'>
+                <EmailIcon />
+              </div>
+              <span>cjdruf1814@naver.com</span>
             </div>
           </div>
         </div>
