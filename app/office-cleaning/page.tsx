@@ -66,13 +66,13 @@ export default function OfficeCleaningPage() {
 
       {/* 2. Philosophy Quote Section */}
       <section
-        className={`py-12 md:py-16 mb-8 md:mb-10 bg-white text-center transition-all duration-[2000ms] ease-out transform ${
+        className={`py-12 md:py-8 md:mt-6 mb-8 md:mb-10 bg-white text-center transition-all duration-1500 ease-out transform ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
         }`}
       >
         <div className='container px-4 mx-auto max-w-4xl'>
           <Quote className='w-10 h-10 md:w-12 md:h-12 text-orange-200 mx-auto mb-4 md:mb-6 rotate-180' />
-          <h2 className='text-xl md:text-2xl lg:text-4xl font-light italic leading-normal text-slate-800 mb-6 md:mb-8'>
+          <h2 className='text-xl md:text-2xl lg:text-4xl font-light italic leading-normal text-slate-800 mb-10 md:mb-16'>
             &ldquo;업무 효율을 높이는
             <br />
             최적의{' '}
@@ -82,7 +82,7 @@ export default function OfficeCleaningPage() {
             를 제공합니다.&rdquo;
           </h2>
           <div className='w-16 h-1 bg-orange-400 mx-auto rounded-full' />
-          <p className='mt-6 md:mt-8 text-gray-500 font-medium tracking-wide text-sm uppercase'>
+          <p className='mt-2 md:mt-4 text-gray-500 font-medium tracking-wide text-sm uppercase'>
             Cheonggyeol Master Team
           </p>
         </div>
