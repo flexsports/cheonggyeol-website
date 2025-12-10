@@ -192,7 +192,7 @@ export default function ResidentialCleaningPage() {
                 ].map((item, i) => (
                   <li key={i} className='flex items-start'>
                     <div className='mt-1 mr-3 md:mr-4 w-1.5 h-1.5 rounded-full bg-sky-500 shrink-0' />
-                    <span className='text-slate-700 text-sm'>{item}</span>
+                    <span className='text-slate-700 text-sm md:text-base'>{item}</span>
                   </li>
                 ))}
               </ul>
@@ -221,7 +221,7 @@ export default function ResidentialCleaningPage() {
                 ].map((item, i) => (
                   <li key={i} className='flex items-start'>
                     <div className='mt-1 mr-3 md:mr-4 w-1.5 h-1.5 rounded-full bg-sky-500 shrink-0' />
-                    <span className='text-slate-700 text-sm'>{item}</span>
+                    <span className='text-slate-700 text-sm md:text-base'>{item}</span>
                   </li>
                 ))}
               </ul>
@@ -274,7 +274,7 @@ export default function ResidentialCleaningPage() {
                 ].map((item, i) => (
                   <li key={i} className='flex items-start'>
                     <div className='mt-1 mr-3 md:mr-4 w-1.5 h-1.5 rounded-full bg-sky-500 shrink-0' />
-                    <span className='text-slate-700 text-sm'>{item}</span>
+                    <span className='text-slate-700 text-sm md:text-base'>{item}</span>
                   </li>
                 ))}
               </ul>

@@ -66,8 +66,9 @@ export default function OfficeCleaningPage() {
 
       {/* 2. Philosophy Quote Section */}
       <section
-        className={`py-12 md:py-16 mb-8 md:mb-10 bg-white text-center transition-all duration-[2000ms] ease-out transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-          }`}
+        className={`py-12 md:py-16 mb-8 md:mb-10 bg-white text-center transition-all duration-[2000ms] ease-out transform ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+        }`}
       >
         <div className='container px-4 mx-auto max-w-4xl'>
           <Quote className='w-10 h-10 md:w-12 md:h-12 text-orange-200 mx-auto mb-4 md:mb-6 rotate-180' />
@@ -191,7 +192,7 @@ export default function OfficeCleaningPage() {
                 ].map((item, i) => (
                   <li key={i} className='flex items-start'>
                     <div className='mt-1 mr-3 md:mr-4 w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0' />
-                    <span className='text-slate-700 text-sm'>{item}</span>
+                    <span className='text-slate-700 text-sm md:text-base'>{item}</span>
                   </li>
                 ))}
               </ul>
@@ -220,7 +221,7 @@ export default function OfficeCleaningPage() {
                 ].map((item, i) => (
                   <li key={i} className='flex items-start'>
                     <div className='mt-1 mr-3 md:mr-4 w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0' />
-                    <span className='text-slate-700 text-sm'>{item}</span>
+                    <span className='text-slate-700 text-sm md:text-base'>{item}</span>
                   </li>
                 ))}
               </ul>
@@ -279,7 +280,7 @@ export default function OfficeCleaningPage() {
                 ].map((item, i) => (
                   <li key={i} className='flex items-start'>
                     <div className='mt-1 mr-3 md:mr-4 w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0' />
-                    <span className='text-slate-700 text-sm'>{item}</span>
+                    <span className='text-slate-700 text-sm md:text-base'>{item}</span>
                   </li>
                 ))}
               </ul>
@@ -308,7 +309,7 @@ export default function OfficeCleaningPage() {
                 ].map((item, i) => (
                   <li key={i} className='flex items-start'>
                     <div className='mt-1 mr-3 md:mr-4 w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0' />
-                    <span className='text-slate-700 text-sm'>{item}</span>
+                    <span className='text-slate-700 text-sm md:text-base'>{item}</span>
                   </li>
                 ))}
               </ul>
