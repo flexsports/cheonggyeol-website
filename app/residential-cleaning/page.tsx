@@ -37,7 +37,7 @@ export default function ResidentialCleaningPage() {
         {/* Hero Background Image */}
         <div className='absolute inset-0'>
           <Image
-            src='/move_in_cleaning/hero2.png'
+            src='/residential_cleaning/hero2.png'
             alt='입주청소 히어로 배경'
             fill
             className='object-cover'
