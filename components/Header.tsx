@@ -25,9 +25,9 @@ export default function Header() {
 
   return (
     <>
-      <header className='w-full h-14 md:h-20 bg-white shadow-sm flex items-center justify-between px-4 md:px-18'>
-        {/* Logo Section - Smaller on mobile */}
-        <Link href='/' className='relative w-28 h-10 md:w-48 md:h-16 block md:mb-2'>
+      <header className='w-full h-14 md:h-20 bg-white shadow-sm flex items-center justify-between px-1 md:px-18'>
+        {/* Logo Section - Larger on mobile */}
+        <Link href='/' className='relative w-32 h-11 md:w-48 md:h-16 block md:mb-2 mb-2'>
           <Image
             src='/logo.png'
             alt='Company Logo'
