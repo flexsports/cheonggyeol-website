@@ -9,8 +9,8 @@ export default function Header() {
 
   const menuItems = [
     { label: '입주·이사 청소', href: '/move-in-cleaning' },
-    { label: '준공, 사무실 청소', href: '/office-cleaning' },
     { label: '거주청소', href: '/residential-cleaning' },
+    { label: '준공, 사무실 청소', href: '/office-cleaning' },
     { label: '줄눈시공', href: '/grout-construction' },
     { label: '각종코팅', href: '/coating' },
   ];
@@ -75,16 +75,14 @@ export default function Header() {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div
-          className='fixed inset-0 bg-black/50 z-40 md:hidden'
-          onClick={closeMobileMenu}
-        />
+        <div className='fixed inset-0 bg-black/50 z-40 md:hidden' onClick={closeMobileMenu} />
       )}
 
       {/* Mobile Menu Drawer */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out md:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-          }`}
+        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
+          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
       >
         {/* Close Button */}
         <div className='flex justify-end p-4'>
@@ -124,7 +122,7 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Mobile Menu Footer */}
+        {/* Mobile Menu Footer
         <div className='absolute bottom-0 left-0 right-0 p-6 border-t border-gray-200'>
           <div className='text-center'>
             <p className='text-sm text-gray-500 mb-2'>문의하기</p>
@@ -135,7 +133,7 @@ export default function Header() {
               010-2880-1814
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

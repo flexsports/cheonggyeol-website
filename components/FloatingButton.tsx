@@ -38,7 +38,7 @@ function KakaoButton() {
 // Main FloatingButton Component
 export default function FloatingButton() {
   return (
-    <div className='fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 flex flex-col md:gap-3 gap-1'>
+    <div className='fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 flex flex-col md:gap-2 gap-1'>
       <PhoneButton />
       <KakaoButton />
     </div>

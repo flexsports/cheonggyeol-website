@@ -16,7 +16,9 @@ export default function Hero() {
         <h1 className='text-3xl md:text-6xl font-bold mb-3 md:mb-4 drop-shadow-lg leading-tight'>
           공간의 가치를 더하는
           <br />
-          프리미엄 청소 서비스
+          <span className='text-transparent bg-clip-text bg-gradient-to-r from-sky-50 to-sky-200'>
+            프리미엄 청소 서비스
+          </span>
         </h1>
         <p className='text-sm md:text-xl drop-shadow-md opacity-90 mb-4 md:mb-6'>
           당신의 소중한 공간을 더욱 빛나게 만들어드립니다.
