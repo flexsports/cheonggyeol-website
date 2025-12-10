@@ -31,7 +31,7 @@ export default function PremiumService() {
   ];
 
   return (
-    <section className='py-20 px-4 bg-white'>
+    <section className='py-20 px-4 bg-white mb-20'>
       <div className='w-[1375px] max-w-full mx-auto'>
         <div className='text-center mb-12'>
           <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>

@@ -12,17 +12,17 @@ interface ServiceItemProps {
 function ServiceItem({ title, iconSrc, href, isAction, showDivider }: ServiceItemProps) {
   const content = (
     <div className='flex flex-col items-center justify-center group'>
-      <div className='mb-3'>
+      <div className='mb-2 w-20 h-20 flex items-center justify-center'>
         <Image
           src={iconSrc}
           alt={title}
-          width={96}
-          height={96}
-          className='object-contain group-hover:scale-110 transition-transform duration-300'
+          width={76}
+          height={76}
+          className='object-contain w-full h-full group-hover:scale-110 transition-transform duration-300'
           priority
         />
       </div>
-      <span className='text-base font-bold text-center text-gray-900'>{title}</span>
+      <span className='text-lg font-bold text-center text-gray-900'>{title}</span>
     </div>
   );
 
@@ -54,15 +54,15 @@ export default function Services() {
       isAction: false,
     },
     {
-      title: '사무실청소',
-      iconSrc: '/main_icon/post_construction_office_cleaning.png',
-      href: '/office-cleaning',
-      isAction: false,
-    },
-    {
       title: '거주청소',
       iconSrc: '/main_icon/residential_cleaning.png',
       href: '/residential-cleaning',
+      isAction: false,
+    },
+    {
+      title: '사무실청소',
+      iconSrc: '/main_icon/post_construction_office_cleaning.png',
+      href: '/office-cleaning',
       isAction: false,
     },
     {
