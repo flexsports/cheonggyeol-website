@@ -39,8 +39,9 @@ function ServiceItem({
   const content = (
     <div className={`flex flex-col items-center justify-center group ${mobileEffects}`}>
       <div
-        className={`flex items-center justify-center ${isMobileCarousel ? 'w-28 h-28 mb-3' : 'w-20 h-20 mb-2'
-          }`}
+        className={`flex items-center justify-center ${
+          isMobileCarousel ? 'w-28 h-28 mb-3' : 'w-20 h-20 mb-2'
+        }`}
       >
         <Image
           src={iconSrc}
@@ -52,8 +53,9 @@ function ServiceItem({
         />
       </div>
       <span
-        className={`font-bold text-center text-gray-900 ${isMobileCarousel ? 'text-lg' : 'text-lg'
-          }`}
+        className={`font-bold text-center text-gray-900 ${
+          isMobileCarousel ? 'text-lg' : 'text-lg'
+        }`}
       >
         {title}
       </span>
@@ -117,12 +119,6 @@ export default function Services() {
       iconSrc: '/main_icon/surface_coating.png',
       href: '/coating',
       isAction: false,
-    },
-    {
-      title: '카카오톡 상담',
-      iconSrc: '/main_icon/kakao_chat_link.png',
-      href: 'https://open.kakao.com/o/example',
-      isAction: true,
     },
   ];
 
@@ -196,8 +192,9 @@ export default function Services() {
             <button
               key={index}
               onClick={() => api?.scrollTo(index)}
-              className={`h-2 rounded-full transition-all duration-300 ${index === current ? 'w-8 bg-sky-600' : 'w-2 bg-gray-300 hover:bg-gray-400'
-                }`}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                index === current ? 'w-8 bg-sky-600' : 'w-2 bg-gray-300 hover:bg-gray-400'
+              }`}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
@@ -207,7 +204,7 @@ export default function Services() {
       {/* Desktop Box - Only visible on desktop */}
       <div className='hidden md:block relative z-10 w-[1375px] max-w-full mx-auto'>
         <div className='rounded-2xl bg-white shadow-lg pt-8 pb-8 border border-gray-200'>
-          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6'>
+          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5'>
             {services.map((service, index) => (
               <ServiceItem
                 key={index}
