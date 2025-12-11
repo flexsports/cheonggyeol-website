@@ -228,15 +228,12 @@ export default function MoveInCleaningPage() {
                     </div>
                   </div>
                   <div className='aspect-square bg-white rounded-[1.5rem] md:rounded-[2rem] shadow-sm p-1.5 md:p-2'>
-                    <div className='relative w-full h-full bg-slate-100 rounded-[1rem] md:rounded-[1.5rem] overflow-hidden flex items-center justify-center border border-dashed border-gray-300'>
-                      <span className='absolute text-gray-400 text-xs md:text-sm z-0'>
-                        이미지 준비중
-                      </span>
+                    <div className='relative w-full h-full bg-slate-100 rounded-[1rem] md:rounded-[1.5rem] overflow-hidden'>
                       <Image
                         src='/move_in_cleaning/window.png'
                         alt='창틀 청소'
                         fill
-                        className='object-cover z-10'
+                        className='object-cover'
                       />
                     </div>
                   </div>

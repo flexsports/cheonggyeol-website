@@ -18,7 +18,7 @@ export default function GroutConstructionPage() {
   return (
     <div className='flex flex-col w-full min-h-screen bg-slate-50 font-sans text-gray-900'>
       {/* Hero Section */}
-      <section className='relative w-full h-[35vh] md:h-[30vh] bg-slate-700 flex items-center justify-center'>
+      <section className='relative w-full h-[25vh] md:h-[30vh] bg-slate-700 flex items-center justify-center'>
         <div className='absolute inset-0 bg-black/40 z-10' />
         <div className='relative z-20 text-center text-white px-4'>
           <h1 className='text-2xl md:text-5xl font-bold mb-2 md:mb-4'>줄눈시공</h1>

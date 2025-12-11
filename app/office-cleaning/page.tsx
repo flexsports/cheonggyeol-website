@@ -104,7 +104,7 @@ export default function OfficeCleaningPage() {
           <div className='md:hidden bg-white rounded-2xl shadow-sm border border-slate-100 p-4 max-w-5xl mx-auto'>
             <div className='grid grid-cols-2 gap-3'>
               {[
-                { name: '사무실/책상', icon: Monitor },
+                { name: '사무실/데스크', icon: Monitor },
                 { name: '회의실', icon: Users },
                 { name: '임원실', icon: Armchair },
                 { name: '탕비실', icon: Coffee },
@@ -129,7 +129,7 @@ export default function OfficeCleaningPage() {
           {/* Desktop: Grid Layout */}
           <div className='hidden md:grid md:grid-cols-4 gap-4 md:gap-8 max-w-5xl mx-auto'>
             {[
-              { name: '사무실/책상', icon: Monitor },
+              { name: '사무실/데스크', icon: Monitor },
               { name: '회의실', icon: Users },
               { name: '임원실', icon: Armchair },
               { name: '탕비실', icon: Coffee },
@@ -228,15 +228,12 @@ export default function OfficeCleaningPage() {
             </div>
             <div className='w-full lg:w-1/2 order-2'>
               <div className='aspect-[4/3] relative bg-slate-50 rounded-sm shadow-xl p-2 md:p-3 border border-gray-100 lg:-rotate-1'>
-                <div className='relative w-full h-full bg-slate-200 overflow-hidden flex items-center justify-center border border-dashed border-gray-300'>
-                  <span className='absolute text-gray-400 text-xs md:text-sm z-0'>
-                    이미지 준비중
-                  </span>
+                <div className='relative w-full h-full bg-slate-200 overflow-hidden'>
                   <Image
                     src='/office/office22.jpg'
                     alt='회의실 사진'
                     fill
-                    className='object-cover z-10'
+                    className='object-cover'
                   />
                 </div>
               </div>
@@ -247,15 +244,12 @@ export default function OfficeCleaningPage() {
           <div className='flex flex-col lg:flex-row items-center gap-8 md:gap-12 lg:gap-20'>
             <div className='w-full lg:w-1/2 order-2 lg:order-1'>
               <div className='aspect-[4/3] relative bg-slate-50 rounded-sm shadow-xl p-2 md:p-3 border border-gray-100 lg:rotate-1'>
-                <div className='relative w-full h-full bg-slate-200 overflow-hidden flex items-center justify-center border border-dashed border-gray-300'>
-                  <span className='absolute text-gray-400 text-xs md:text-sm z-0'>
-                    이미지 준비중
-                  </span>
+                <div className='relative w-full h-full bg-slate-200 overflow-hidden'>
                   <Image
                     src='/office/office3.jpg'
                     alt='탕비실/휴게실 사진'
                     fill
-                    className='object-cover z-10'
+                    className='object-cover'
                   />
                 </div>
               </div>
@@ -316,15 +310,12 @@ export default function OfficeCleaningPage() {
             </div>
             <div className='w-full lg:w-1/2 order-2'>
               <div className='aspect-[4/3] relative bg-slate-50 rounded-sm shadow-xl p-2 md:p-3 border border-gray-100 lg:-rotate-1'>
-                <div className='relative w-full h-full bg-slate-200 overflow-hidden flex items-center justify-center border border-dashed border-gray-300'>
-                  <span className='absolute text-gray-400 text-xs md:text-sm z-0'>
-                    이미지 준비중
-                  </span>
+                <div className='relative w-full h-full bg-slate-200 overflow-hidden'>
                   <Image
                     src='/office/office4.jpg'
                     alt='바닥 왁싱 작업 사진'
                     fill
-                    className='object-cover z-10'
+                    className='object-cover'
                   />
                 </div>
               </div>
