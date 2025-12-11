@@ -12,9 +12,9 @@ export const metadata: Metadata = {
     description: '청소에 프리미엄을 더하다. 입주청소 전문기업 청결입니다.',
     images: [
       {
-        url: '/cheonggyeol_img.png',
+        url: '/cheonggyeol_img_open_graph.png',
         width: 1200,
-        height: 630,
+        height: 600,
         alt: '청결 - 청소에 프리미엄을 더하다',
       },
     ],
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '입주청소 전문기업 | 청결',
     description: '청소에 프리미엄을 더하다. 입주청소 전문기업 청결입니다.',
-    images: ['/cheonggyeol_img.png'],
+    images: ['/cheonggyeol_img_open_graph.png'],
   },
 };
 
