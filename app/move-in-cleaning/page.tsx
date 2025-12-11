@@ -1,9 +1,52 @@
+'use client';
+
 import { Heart, Baby, Sun, Sparkles, ArrowRight, Smile, Coffee } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
+import toast from 'react-hot-toast';
 import ContactCTA from '@/components/ContactCTA';
 
 export default function MoveInCleaningPage() {
+  const [isMobile, setIsMobile] = useState(false);
+  const phoneNumber = '010-2880-1814';
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768); // md 브레이크포인트 (768px)
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const handlePhoneClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    // 모바일이면 기본 동작(tel: 링크) 실행
+    if (isMobile) {
+      return; // Link의 기본 동작 허용
+    }
+
+    // PC에서는 기본 동작 방지하고 toast 표시
+    e.preventDefault();
+    toast.success(`전화번호: ${phoneNumber}`, {
+      duration: 4000,
+      iconTheme: {
+        primary: '#22c55e', // 초록색
+        secondary: '#fff',
+      },
+      style: {
+        borderRadius: '10px',
+        background: '#fff',
+        color: '#333',
+        fontSize: '16px',
+        padding: '16px',
+        border: '1px solid #e5e7eb',
+        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+      },
+    });
+  };
   return (
     <div className='flex flex-col w-full min-h-screen bg-sky-50/70 font-sans selection:bg-sky-100'>
       {/* 1. Cool Hero Section */}
@@ -32,20 +75,31 @@ export default function MoveInCleaningPage() {
                 보이지 않는 곳까지 정성을 담아 준비해드립니다.
               </p>
               <div className='flex flex-row gap-2.5 md:gap-4 justify-center lg:justify-start w-full max-w-md mx-auto lg:mx-0'>
-                <Link
+                {/* 미래 사용을 위한 카카오톡 연동 버튼 (현재 주석처리) */}
+                {/* <Link
                   href='https://pf.kakao.com/_xjHxjxjG/chat'
                   target='_blank'
                   className='flex-1 md:flex-none w-auto min-w-[140px] md:min-w-[160px] inline-flex items-center justify-center h-12 md:h-14 px-4 md:px-8 bg-slate-800 text-white font-bold text-sm md:text-base rounded-2xl transition-all shadow-lg shadow-slate-200 hover:bg-slate-700 hover:shadow-xl'
                 >
                   무료 견적 받기
                   <ArrowRight className='w-4 h-4 md:w-5 md:h-5 ml-2' />
-                </Link>
+                </Link> */}
                 <Link
                   href='tel:010-2880-1814'
+                  onClick={handlePhoneClick}
+                  className='flex-none w-auto min-w-[180px] md:min-w-[160px] inline-flex items-center justify-center h-10 md:h-14 px-3 md:px-8 bg-slate-800 text-white font-bold text-sm md:text-base rounded-2xl transition-all shadow-lg shadow-slate-200 hover:bg-slate-700 hover:shadow-xl'
+                >
+                  무료 견적 받기
+                  <ArrowRight className='w-3.5 h-3.5 md:w-5 md:h-5 ml-1.5 md:ml-2' />
+                </Link>
+                {/* 미래 사용을 위한 전화 상담 버튼 (현재 주석처리) */}
+                {/* <Link
+                  href='tel:010-2880-1814'
+                  onClick={handlePhoneClick}
                   className='flex-1 md:flex-none w-auto min-w-[140px] md:min-w-[160px] inline-flex items-center justify-center h-12 md:h-14 px-4 md:px-8 bg-white text-slate-800 font-bold text-sm md:text-base rounded-2xl border border-slate-200 transition-all hover:bg-slate-50 hover:border-slate-300'
                 >
                   전화 상담
-                </Link>
+                </Link> */}
               </div>
             </div>
 

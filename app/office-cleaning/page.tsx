@@ -14,9 +14,12 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import toast from 'react-hot-toast';
 
 export default function OfficeCleaningPage() {
   const [isVisible, setIsVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const phoneNumber = '010-2880-1814';
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -25,6 +28,43 @@ export default function OfficeCleaningPage() {
 
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768); // md 브레이크포인트 (768px)
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const handlePhoneClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    // 모바일이면 기본 동작(tel: 링크) 실행
+    if (isMobile) {
+      return; // Link의 기본 동작 허용
+    }
+
+    // PC에서는 기본 동작 방지하고 toast 표시
+    e.preventDefault();
+    toast.success(`전화번호: ${phoneNumber}`, {
+      duration: 4000,
+      iconTheme: {
+        primary: '#22c55e', // 초록색
+        secondary: '#fff',
+      },
+      style: {
+        borderRadius: '10px',
+        background: '#fff',
+        color: '#333',
+        fontSize: '16px',
+        padding: '16px',
+        border: '1px solid #e5e7eb',
+        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+      },
+    });
+  };
 
   return (
     <div className='flex flex-col w-full min-h-screen bg-white font-sans text-gray-900'>
@@ -335,16 +375,18 @@ export default function OfficeCleaningPage() {
             고객님의 일정과 예산에 맞춰 최적의 솔루션을 제안해드립니다.
           </p>
           <div className='flex flex-row gap-2.5 md:gap-3 lg:gap-4 justify-center items-center w-full max-w-md mx-auto sm:max-w-none'>
-            <Link
+            {/* 미래 사용을 위한 카카오톡 무료 견적 버튼 (현재 주석처리) */}
+            {/* <Link
               href='https://pf.kakao.com/_xjHxjxjG/chat'
               target='_blank'
               className='flex-1 sm:flex-none sm:w-auto sm:min-w-[200px] inline-flex h-12 sm:h-14 items-center justify-center rounded-xl bg-orange-500 text-sm sm:text-base font-bold text-gray-100 shadow-lg transition-colors hover:bg-orange-600 px-3 md:px-4'
             >
               카카오톡 무료 견적
-            </Link>
+            </Link> */}
             <Link
               href='tel:010-2880-1814'
-              className='flex-1 sm:flex-none sm:w-auto sm:min-w-[200px] inline-flex h-12 sm:h-14 items-center justify-center rounded-xl border-2 border-white/30 bg-white text-sm sm:text-base font-bold text-slate-900 backdrop-blur-sm transition-colors hover:bg-gray-200 px-3 md:px-4'
+              onClick={handlePhoneClick}
+              className='flex-1 sm:flex-none sm:w-auto sm:min-w-[200px] inline-flex h-12 sm:h-14 items-center justify-center rounded-xl bg-orange-500 text-sm sm:text-base font-bold text-gray-100 shadow-lg transition-colors hover:bg-orange-600 px-3 md:px-4'
             >
               전화 상담하기
             </Link>

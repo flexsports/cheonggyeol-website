@@ -3,6 +3,7 @@ import './globals.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import FloatingButton from '../components/FloatingButton';
+import Toaster from '../components/Toaster';
 
 export const metadata: Metadata = {
   title: '입주청소 전문기업 | 청결',
@@ -41,6 +42,7 @@ export default function RootLayout({
         <main className='flex-1'>{children}</main>
         <Footer />
         <FloatingButton />
+        <Toaster />
       </body>
     </html>
   );
