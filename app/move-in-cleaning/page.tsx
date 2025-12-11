@@ -87,7 +87,7 @@ export default function MoveInCleaningPage() {
                 <Link
                   href='tel:010-2880-1814'
                   onClick={handlePhoneClick}
-                  className='flex-none w-auto min-w-[180px] md:min-w-[160px] inline-flex items-center justify-center h-10 md:h-14 px-3 md:px-8 bg-slate-800 text-white font-bold text-sm md:text-base rounded-2xl transition-all shadow-lg shadow-slate-200 hover:bg-slate-700 hover:shadow-xl'
+                  className='flex-none w-auto min-w-[180px] md:min-w-[160px] inline-flex items-center justify-center h-12 md:h-14 px-3 md:px-8 bg-slate-800 text-white font-bold text-sm md:text-base rounded-2xl transition-all shadow-lg shadow-slate-200 hover:bg-slate-700 hover:shadow-xl'
                 >
                   무료 견적 받기
                   <ArrowRight className='w-3.5 h-3.5 md:w-5 md:h-5 ml-1.5 md:ml-2' />
