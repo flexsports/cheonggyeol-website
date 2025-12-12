@@ -7,6 +7,9 @@ import { useState, useEffect } from 'react';
 import toast from 'react-hot-toast';
 import ContactCTA from '@/components/ContactCTA';
 
+// Note: 'use client' 페이지에서는 generateMetadata를 사용할 수 없습니다.
+// 대신 layout.tsx 또는 별도의 metadata 파일을 통해 관리합니다.
+
 export default function MoveInCleaningPage() {
   const [isMobile, setIsMobile] = useState(false);
   const phoneNumber = '010-2880-1814';
