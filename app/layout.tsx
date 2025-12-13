@@ -52,7 +52,6 @@ export const metadata: Metadata = {
     title: '입주청소 전문기업 | 청결',
     description:
       '청소에 프리미엄을 더하다. 입주청소, 이사청소, 사무실청소, 준공청소, 각종코팅, 줄눈시공 전문기업 청결입니다.',
-    url: 'https://www.xn--p89ao90bble4rb9wiba.com',
     siteName: '청결',
     images: [
       {
@@ -74,6 +73,11 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: '/',
+  },
+  icons: {
+    icon: [{ url: '/favicon.ico', sizes: '48x48', type: 'image/x-icon' }],
+    shortcut: [{ url: '/favicon.ico', type: 'image/x-icon' }],
+    apple: [{ url: '/favicon.ico', sizes: '48x48' }],
   },
 };
 
